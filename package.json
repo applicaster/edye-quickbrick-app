@@ -1,0 +1,25 @@
+{
+  "name": "edye",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces": [
+    "development-app",
+    "plugins"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "zapplicaster:prepare": "node_modules/.bin/zapplicaster-cli prepare -y -d development-app -a",
+    "start": "node_modules/.bin/react-native start --projectRoot ./development-app",
+    "reset": "rm -rf ./development-app/* ./development-app/.babelrc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@applicaster/zapplicaster-cli": "5.1.0",
+    "react-native": "0.62.2",
+    "react": "16.11.0"
+  }
+}
